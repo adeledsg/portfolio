@@ -1,3 +1,4 @@
+/*Document set up*/
 *{ 
     margin: 0;
     padding: 0;
@@ -19,6 +20,7 @@ body {
     width: 100%; 
 }
 
+/*header*/
 header {
     display: flex;
     justify-content: space-between;
@@ -37,7 +39,10 @@ header {
 #intro p {
     margin: 0;
     line-height: 1.5;
+    z-index: 1;
 }
+
+/*Navigation*/
 
 .burger div {
     width: 32px; 
@@ -86,6 +91,7 @@ header {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/*main*/
 main {
     display: flex;
     flex-direction: column;
@@ -99,8 +105,16 @@ main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: center;     /* horizontal centering (optional) */
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
@@ -116,14 +130,23 @@ h2{
     font-family: "Forma DJR", sans-serif; 
     font-size: 1rem;
     line-height: 2rem;
-    letter-spacing: 10%;
+    letter-spacing: 0.1rem;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    z-index: 1;
     padding-left: 0.5rem;
 }
 
-p{
-    padding-left: 0.5rem;
-    line-height: 1.5rem;
-    z-index: 0;
+#eyes{
+    max-width: 70%;
+    height: auto;
+    display: flex;
+    align-self: flex-end;
 }
 
 .button2 {
@@ -136,17 +159,48 @@ p{
     border-radius: 1rem;
     background-color: #F2F1F4;
     color: #A04FF0; 
-    text-decoration: none;    /* Remove default link underline */
+    font-family: "forma-djr-text", sans-serif;
+    font-style: normal;
+    text-decoration: none;
     text-align: center;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.5rem;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-self: center;
+    letter-spacing: 0.1rem;
 }
 
-.underline{
+.highlight{
     background-color: #F7FA57;
+}
+
+/*Footer*/
+footer {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 1.5;
+    text-decoration: none;
+    font-size: 16px; 
+    font-family: "forma-djr-text", sans-serif;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2C292E;
+}
+
+.social:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
 }
