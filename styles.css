@@ -35,7 +35,7 @@ header {
 
 #intro p {
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.5rem;
     z-index: 1;
 }
 
@@ -54,7 +54,7 @@ header {
     right: 0;
     height: 0;
     top: 5rem;
-    background-color: #2C292E;
+    background-color: #F4F4F0;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
@@ -68,8 +68,10 @@ header {
 }
 
 .nav-links li a{
-  color: #F4F4F0;
-  text-decoration: none;
+    color:#2C292E;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .burger {
@@ -94,8 +96,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
 }
 
 .project{
@@ -148,7 +150,7 @@ h1{
     font-family: "Forma DJR", sans-serif; 
     font-weight: 100;
     font-size: 1.375rem;
-    padding: 0.5rem;
+    padding: 1rem;
     line-height: 2rem;
     letter-spacing: 0.1rem;
 }
@@ -158,17 +160,17 @@ h2{
     font-size: 1rem;
     line-height: 2rem;
     letter-spacing: 0.1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-transform: uppercase;
 }
 
 p {
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.5rem;
     z-index: 1;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*images*/
@@ -274,10 +276,9 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.5rem;
     text-decoration: none;
-    font-size: 16px; 
-    font-family: "forma-djr-text", sans-serif;
+    font-size: 1rem; 
     font-family: "forma-djr-text", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -341,13 +342,16 @@ h1 {
 
 h2 {
     font-size: 1.125rem;
-    padding: 0.5rem;
-
 }
 
 p {
     font-size: 1.125rem;
-    line-height: 1.5;
+    line-height: 1.5rem;
+}
+
+.button2{
+
+    font-size: 1rem;
 }
 
 .content p {
@@ -481,12 +485,204 @@ p {
 
 /*Footer*/
 
+.social {
+    font-size: 1.125rem;
+}
+
 .socials{
     display: flex;
     flex-direction: row;
     align-self: flex-end;
-    font-size: 1.125rem;
     gap: 3rem;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+header {
+    margin: 5rem;
+}
+
+.nav-links li a {
+    font-size: 1.25rem;
+}
+
+/*Main*/
+
+#wrapper{
+    gap: 3rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.about {
+    margin: 5rem;
+    margin-bottom: 0;
+}
+
+.contents{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    padding: 2rem;
+}
+
+.description{
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.section {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+/*text Elements*/
+
+h1{
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+};
+ 
+.button2{
+    font-size: 1.125rem;
+}
+
+.content p {
+    max-width: 77ch;
+}
+
+/*footer*/
+
+footer {
+    margin-top: 2rem;
+    margin:5rem;
+}
+
+.social{
+    font-size: 1.25rem;
+}
+
+}
+
+@media (min-width: 1200px){
+
+header {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+/*Main*/
+#wrapper{
+    margin-left: 7rem;
+    margin-right: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-content: space-around;
+    justify-content: flex-end;
+}
+
+.project{
+    max-width: 440px;
+    height: auto;
+}
+
+#prep{
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: flex-end;
+}
+
+#wild{
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: flex-end;
+}
+
+#ventures{
+    grid-row: 2;
+    grid-column: 3;
+    justify-self: flex-end;
+}
+
+.about {
+    margin-top: 4rem;
+    margin-right: 7rem;
+    margin-left: 7rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+
+#title-about-me{
+    grid-row: 1;
+    grid-column: 4;
+    text-align: right;
+}
+
+#p-about-me{
+    grid-row: 2;
+    grid-column: 1/4;
+    column-count: 3;
+    max-width: 75ch;
+    column-gap: 3rem;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+#article1{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#article2{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#article3{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#article4{
+    grid-row: 3;
+    grid-column: 1;
+}
+
+
+/*images*/
+#eyes{
+    position: relative;
+    grid-row: 1;
+    grid-column: 3;
+    min-width: 30%;
+    max-width: 50%;
+    justify-self: flex-end;
+}
+
+/*Footer*/
+
+footer {
+    margin: 7rem;
+    margin-top: 2rem;
 }
 
 }
