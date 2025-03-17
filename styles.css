@@ -237,6 +237,7 @@ p {
     font-family: "forma-djr-text", sans-serif;
     font-style: normal;
     text-decoration: none;
+    text-transform: lowercase;
     text-align: center;
     font-weight: 600;
     font-size: 0.875rem;
