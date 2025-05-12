@@ -1,4 +1,5 @@
 /*Document set up*/
+
 *{ 
     margin: 0;
     padding: 0;
@@ -8,10 +9,8 @@
 html{
     font-size: 16px; 
     font-family: "forma-djr-text", sans-serif;
-    font-family: "forma-djr-text", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #F4F4F0; 
     color: #2C292E;
 }
 
@@ -20,17 +19,68 @@ body {
     width: 100%; 
 }
 
-/*header*/
+#landing-page-body{
+    background-color: #F4F4F0;
+}
+
+/*Hero/landing page*/
+
+#background-colour{
+    background:
+    linear-gradient(rgba(192, 228, 240, 0.8), rgba(192, 228, 240, 0.8)), /* your overlay color */
+    url('assets/paper-texture.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#hero{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: start;
+}
+
+#display{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.2rem;
+    font-size: 5rem;
+    line-height: 6rem;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2C292E;
+    padding-top: 10rem;
+}
+
+#circle{
+    position: absolute;
+    left: 25vw;
+    transform: scale(1.1);
+}
+
+/*header and Navigation*/
+
+#scribble{
+    position: absolute;
+    top: 1rem;
+    transform: scale(0.9);
+    z-index: 0;
+    max-width: 80%;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem;
+    padding: 5vw;
 }
 
 #intro{
-    display: flex;
-    flex-direction: column;
+    z-index: 1;
 }
 
 #intro p {
@@ -39,7 +89,9 @@ header {
     z-index: 1;
 }
 
-/*Navigation*/
+.burger{
+    z-index: 1;
+}
 
 .burger div {
     width: 32px; 
@@ -47,6 +99,7 @@ header {
     background-color: #2C292E;
     margin: 8px;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .nav-links {
@@ -54,17 +107,18 @@ header {
     right: 0;
     height: 0;
     top: 5rem;
-    background-color: #F4F4F0;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
     transition: height 0.5s ease;
+    z-index: 1;
 }
 
 .nav-links li {
     width: 100%;
     text-align: center;
     margin: 0.5rem;
+    z-index: 1;
 }
 
 .nav-links li a{
@@ -72,6 +126,7 @@ header {
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5rem;
+    z-index: 1;
 }
 
 .burger {
@@ -96,17 +151,52 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-right: 4rem;
-    margin-left: 4rem;
+    background-color: #F4F4F0; 
 }
 
+.landing{
+    height: 100vh;
+    background-color: #D8F0F8;
+    width: 100vw;
+}
+
+#name{
+    max-width: 99vw;
+    height: auto;
+    margin-top: 8rem;
+}
+
+#tape1 {
+    position: absolute;
+    transform: translate(-145px, -135px);
+    width: 27%;
+    height: auto;
+}
 .project{
     background-color: #FAFBF9;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+#prep{
+    position:relative;
+    top: -8rem;
+    margin-top: 2rem;
+}
+
+#wild{
+    position:relative;
+    top: -8rem;
+}
+
+#ventures{
+    position:relative;
+    top: -8rem;
 }
 
 .about{
@@ -225,7 +315,7 @@ p {
 
 .button2 {
     display: inline-block;
-    margin: 1rem;
+    margin: 1.5rem;
     margin-bottom: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -268,7 +358,7 @@ p {
 
 /*Footer*/
 footer {
-    margin: 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -295,7 +385,7 @@ footer {
 @media (min-width: 600px) {
 
 header{
-    margin-top: 3rem;
+    padding-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -306,6 +396,14 @@ header{
 
 .burger {
     display: none;
+}
+
+#scribble{
+    position: absolute;
+    top: 5rem;
+    left: 10rem;
+    transform: scale(1.6);
+    z-index: 0;
 }
   
 .nav-links {
@@ -329,13 +427,32 @@ header{
     color: #2C292E;
     font-size: 1.125rem;
     letter-spacing: 0.1rem;
-    font-weight: 600;
 }
 
 .nav-links li a:hover{
     text-decoration: underline;
     text-underline-offset: 1rem;
 }
+
+#hero{
+    height: 85vh;
+}
+
+#display{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.2rem;
+    font-size: 7rem;
+    line-height: 8rem;
+    padding-left: 2rem;
+}
+
+#circle{
+    left: 26vw;
+    transform: scale(1.5);
+}
+
 
 /*text elements*/
 h1 {
@@ -492,11 +609,34 @@ p {
 @media (min-width: 1024px) {
 
 header {
-    margin: 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    padding-top: 5rem;
+}
+
+#scribble{
+    display: none;
 }
 
 .nav-links li a {
     font-size: 1.25rem;
+}
+
+
+/*Hero*/
+
+#display{
+    letter-spacing: 0.2rem;
+    font-size: 6rem;
+    line-height: 8rem;
+    padding-left: 5rem;
+    top: -5rem;
+    padding-top: 10vw;
+}
+
+#circle{
+    left: 22vw;
+    transform: scale(1.5);
 }
 
 /*Main*/
@@ -558,8 +698,11 @@ p {
 /*footer*/
 
 footer {
+    padding: 0;
     margin-top: 2rem;
-    margin:5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
 }
 
 .social{
@@ -575,6 +718,24 @@ header {
     margin-right: 7rem;
 }
 
+/*Hero*/
+
+#hero{
+    height: 80vh;
+}
+
+#display{
+    letter-spacing: 0.3rem;
+    font-size: 6rem;
+    line-height: 6rem;
+    padding-left: 7rem;
+}
+
+#circle{
+    left: 20vw;
+    transform: scale(1.6);
+}
+
 /*Main*/
 #wrapper{
     margin-left: 7rem;
@@ -584,29 +745,36 @@ header {
     grid-template-rows: 1fr 2fr;
     justify-content: space-around;
     justify-content: flex-end;
+    position: relative;
+    max-height: 100vh;
 }
 
 .project{
     max-width: 440px;
     height: auto;
+    position: relative;
+    margin-top: 2rem;
 }
 
 #prep{
     grid-row: 2;
     grid-column: 1;
     justify-self: flex-end;
+    top: -17rem;
 }
 
 #wild{
     grid-row: 2;
     grid-column: 2;
     justify-self: flex-end;
+    top: -17rem;
 }
 
 #ventures{
     grid-row: 2;
     grid-column: 3;
     justify-self: flex-end;
+    top: -17rem;
 }
 
 .about {
@@ -749,5 +917,34 @@ footer {
     margin: 7rem;
     margin-top: 5rem;
 }
+
+}
+
+@media (min-width: 1500px){
+
+#display{
+    letter-spacing: 0.3rem;
+    font-size: 8rem;
+    line-height: 9rem;
+    padding-left: 7rem;
+}
+
+#circle{
+    left: 18vw;
+    transform: scale(1.8);
+}
+
+#prep{
+    top: -25rem;
+}
+
+#wild{
+    top: -25rem;
+}
+
+#ventures{
+    top: -25rem;
+}
+
 
 }
