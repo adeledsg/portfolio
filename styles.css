@@ -26,12 +26,16 @@ body {
 /*Hero/landing page*/
 
 #background-colour{
+
+    /**
     background:
-    linear-gradient(rgba(192, 228, 240, 0.8), rgba(192, 228, 240, 0.8)), /* your overlay color */
+    linear-gradient(rgba(192, 228, 240, 0.8), rgba(192, 228, 240, 0.8)),
     url('assets/paper-texture.png');
+**/
+    background-color: #D8F0F8;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 #hero{
@@ -47,19 +51,21 @@ body {
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.2rem;
-    font-size: 5rem;
-    line-height: 6rem;
+    font-size: 4rem;
+    line-height: 5rem;
     font-family: "forma-djr-display", sans-serif;
     font-weight: 500;
     font-style: normal;
     color: #2C292E;
-    padding-top: 10rem;
+    padding-top: 40vw;
+    padding-left: 10vw;
 }
 
 #circle{
     position: absolute;
     left: 25vw;
-    transform: scale(1.1);
+    transform: scale(0.9);
+    bottom: -2vw;
 }
 
 /*header and Navigation*/
@@ -70,6 +76,7 @@ body {
     transform: scale(0.9);
     z-index: 0;
     max-width: 80%;
+    pointer-events: none;
 }
 
 header {
@@ -168,10 +175,27 @@ header {
 
 #tape1 {
     position: absolute;
-    transform: translate(-145px, -135px);
+    top: -5vw;
+    left: -5vw;
     width: 27%;
     height: auto;
 }
+
+#tape2 {
+    position: absolute;
+    top: -5vw;
+    width: 9%;
+    height: auto;
+}
+
+#tape3 {
+    position: absolute;
+    right: -4vw;
+    top: -4vw;
+    width: 27%;
+    height: auto;
+}
+
 .project{
     background-color: #FAFBF9;
     padding: 2rem;
@@ -181,22 +205,22 @@ header {
     align-items: center;
     margin-right: 2rem;
     margin-left: 2rem;
+    position: relative;
 }
 
 #prep{
     position:relative;
-    top: -8rem;
-    margin-top: 2rem;
+    top: -20vw;
 }
 
 #wild{
     position:relative;
-    top: -8rem;
+    top: -20vw;
 }
 
 #ventures{
     position:relative;
-    top: -8rem;
+    top: -20vw;
 }
 
 .about{
@@ -397,14 +421,6 @@ header{
 .burger {
     display: none;
 }
-
-#scribble{
-    position: absolute;
-    top: 5rem;
-    left: 10rem;
-    transform: scale(1.6);
-    z-index: 0;
-}
   
 .nav-links {
     position: static;
@@ -435,7 +451,7 @@ header{
 }
 
 #hero{
-    height: 85vh;
+    height: 60vh;
 }
 
 #display{
@@ -443,14 +459,17 @@ header{
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.2rem;
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 8rem;
-    padding-left: 2rem;
+    padding-left: 10vw;
+    padding-top: 10vw;
 }
 
 #circle{
     left: 26vw;
-    transform: scale(1.5);
+    transform: scale(1.2);
+    bottom: 3vw;
+
 }
 
 
@@ -492,16 +511,19 @@ p {
 #prep{
     grid-row: 1;
     grid-column: 2;
+    top: -10vw;
 }
 
 #wild{
     grid-row: 2;
     grid-column: 1;
+    top: -10vw;
 }
 
 #ventures{
     grid-row: 2;
     grid-column: 2;
+    top: -10vw;
 }
 
 .about {
@@ -606,6 +628,42 @@ p {
 
 }
 
+@media only screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+
+#hero{
+    height: 85vh;
+}
+
+#display{
+    letter-spacing: 0.2rem;
+    font-size: 5rem;
+    line-height: 6rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10vw;
+    padding-top: 1vw;
+}
+
+#circle{
+    left: 23vw;
+    transform: scale(1.2);
+    bottom: 1vw;
+}
+
+#prep{
+    top: -7vw;
+}
+
+#wild{
+    top: -7vw;
+}
+
+#ventures{
+    top: -7vw;
+}
+}
+
 @media (min-width: 1024px) {
 
 header {
@@ -625,11 +683,15 @@ header {
 
 /*Hero*/
 
+#hero{
+    height: 50vh;
+}
+
 #display{
     letter-spacing: 0.2rem;
     font-size: 6rem;
     line-height: 8rem;
-    padding-left: 5rem;
+    padding-left: 10vw;
     top: -5rem;
     padding-top: 10vw;
 }
@@ -711,6 +773,33 @@ footer {
 
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1199px) and (orientation: landscape) {
+
+#hero{
+    height: 60vh;
+}
+
+
+#circle{
+    left: 24vw;
+    transform: scale(1.5);
+    bottom: 2vw;
+}
+
+#prep{
+    top: -7vw;
+}
+
+#wild{
+    top: -7vw;
+}
+
+#ventures{
+    top: -7vw;
+}
+
+}
+
 @media (min-width: 1200px){
 
 header {
@@ -721,19 +810,21 @@ header {
 /*Hero*/
 
 #hero{
-    height: 80vh;
+    height: 65vh;
 }
 
 #display{
     letter-spacing: 0.3rem;
     font-size: 6rem;
-    line-height: 6rem;
-    padding-left: 7rem;
+    line-height: 7rem;
+    padding-left: 10vw;
+    padding-top: 5vw;
 }
 
 #circle{
-    left: 20vw;
+    left: 23vw;
     transform: scale(1.6);
+    bottom: 1vw;
 }
 
 /*Main*/
@@ -742,7 +833,7 @@ header {
     margin-right: 7rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr;
     justify-content: space-around;
     justify-content: flex-end;
     position: relative;
@@ -756,25 +847,42 @@ header {
     margin-top: 2rem;
 }
 
+#tape1 {
+    top: -2vw;
+    left: -3vw;
+    width: 35%;
+}
+
+#tape2 {
+    top: -3vw;
+    width: 12%;
+}
+
+#tape3 {
+    right: -4vw;
+    top: -4vw;
+    width: 35%;
+}
+
 #prep{
     grid-row: 2;
     grid-column: 1;
     justify-self: flex-end;
-    top: -17rem;
+    top: -10vw;
 }
 
 #wild{
     grid-row: 2;
     grid-column: 2;
     justify-self: flex-end;
-    top: -17rem;
+    top: -10vw;
 }
 
 #ventures{
     grid-row: 2;
     grid-column: 3;
     justify-self: flex-end;
-    top: -17rem;
+    top: -10vw;
 }
 
 .about {
@@ -922,11 +1030,15 @@ footer {
 
 @media (min-width: 1500px){
 
+#hero{
+    height: 70vh;
+}
+
 #display{
     letter-spacing: 0.3rem;
     font-size: 8rem;
     line-height: 9rem;
-    padding-left: 7rem;
+    padding-left: 10vw;
 }
 
 #circle{
@@ -935,15 +1047,15 @@ footer {
 }
 
 #prep{
-    top: -25rem;
+    top: -10vw;
 }
 
 #wild{
-    top: -25rem;
+    top: -10vw;
 }
 
 #ventures{
-    top: -25rem;
+    top: -10vw;
 }
 
 
